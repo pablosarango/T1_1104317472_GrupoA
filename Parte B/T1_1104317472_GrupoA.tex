@@ -1,0 +1,155 @@
+\documentclass[a4paper]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{vmargin}
+\usepackage{multirow, array} % para las tablas
+\usepackage{float} % para usar [H]
+
+\setpapersize{A4}
+\setmargins{2.5cm}         
+{1.5cm}                      
+{16.5cm}                  
+{23.42cm}                    
+{10pt}                       
+{1cm}                       
+{0pt}                         
+{2cm}
+
+
+\usepackage{Sweave}
+\begin{document}
+\input{T1_1104317472_GrupoA-concordance}
+\begin{center}
+\includegraphics[width=3cm, height=3cm]{unl-logo.jpg}\\\
+\end{center}
+\begin{center}
+   \huge{}
+ Universidad Nacional de Loja \\ \ \\
+ Ingeniería en Sistemas\\ \ \\
+ Examen\\ \ \\
+ Autor:\\ \ \\ 
+ Pablo Gerardo Sarango Uchuari\\
+ ECINF7226\\ \ \\ 
+ Tutor:\\ \ \\ 
+ Ing. Pablo Ordóñez\\
+ ECNIF4179\\ \ \\ \ \\ 
+ Ciclo: \\
+ 6° A\\ \ \\ \ \\ 
+ 14 de Octubre del 2015
+ \end{center}
+
+\newpage
+\begin{itemize}
+\item ¿Es aplicable la ingeniería de software cuando se elaboran webapps? Si es así, ¿cómo puede
+modificarse para que asimile las características únicas de éstas?
+\end{itemize}
+Si es aplicable la ingeniería de software a webapps. El proceso de calidad debe desarrollarse durante todo el ciclo de vida del desarrollo. Este proceso otorgará recomendaciones para introducir mejoras.
+
+\begin{itemize}
+\item Un breve descripción del dataset Titanic
+\end{itemize}
+
+\begin{center}
+\LARGE{\textbf{La supervivencia de los pasajeros del Titanic}}
+\end{center}
+
+\textbf{Descripción}
+\\
+Este conjunto de datos proporciona información sobre el destino de los pasajeros en el primer viaje fatal del trasatlántico Titanic, que se resumen de acuerdo a la situación económica (clase), el sexo, la edad y la supervivencia.\\
+
+\textbf{Uso}
+\\
+Titanic\\
+
+\textbf{Formato}
+\\
+Una matriz de 4 dimensiones resultante de cruzar la tabulación de 2201 observaciones sobre 4 variables. Las variables y sus niveles son los siguientes:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | c | c | c | c | }
+  \hline
+  No & Nombre & Niveles\\
+  \hline
+  1	& Clase &	Primero, segundo, tercero, Tripulación\\
+  \hline 
+  2 & Sexo & Hombre, Mujer\\
+  \hline 
+  3 & Años & Niño, Adulto\\
+  \hline
+  4 & Sobrevivieron & No, si\\
+  \hline
+\end{tabular}
+\end{table}
+
+\textbf{Detalles}
+
+El hundimiento del Titanic es un evento famoso, y nuevos libros siguen siendo publicado sobre el tema. Muchos hechos-de conocidas las proporciones de los pasajeros de primera clase a la política de "mujeres y niños primero ', y el hecho de que esa política no era un éxito completo en el ahorro de las mujeres y niños en la tercera clase se reflejan en la supervivencia tarifas de diversas clases de pasajeros.\\
+
+Estos datos fueron recogidos originalmente por la Junta Británica de Comercio en su investigación del hundimiento. Tenga en cuenta que no hay un acuerdo completo entre las fuentes primarias como a las cifras exactas a bordo, rescatados, o perdidos.\\
+
+Debido, en particular, a la película de gran éxito 'Titanic', los últimos años vieron un aumento en el interés público en el Titanic. Datos muy detallados sobre los pasajeros ya está disponible en Internet, en sitios como la Enciclopedia Titanica (http://www.rmplc.co.uk/eduweb/sites/phind).\\
+
+\begin{itemize}
+\item Mostrar el dataset
+\end{itemize}
+\begin{Schunk}
+\begin{Soutput}
+, , Age = Child, Survived = No
+
+      Sex
+Class  Male Female
+  1st     0      0
+  2nd     0      0
+  3rd    35     17
+  Crew    0      0
+
+, , Age = Adult, Survived = No
+
+      Sex
+Class  Male Female
+  1st   118      4
+  2nd   154     13
+  3rd   387     89
+  Crew  670      3
+
+, , Age = Child, Survived = Yes
+
+      Sex
+Class  Male Female
+  1st     5      1
+  2nd    11     13
+  3rd    13     14
+  Crew    0      0
+
+, , Age = Adult, Survived = Yes
+
+      Sex
+Class  Male Female
+  1st    57    140
+  2nd    14     80
+  3rd    75     76
+  Crew  192     20
+\end{Soutput}
+\end{Schunk}
+
+\begin{itemize}
+\item ¿Cuál es el número total de casos en el dataset?
+\end{itemize}
+Summary del dataset:
+\begin{Schunk}
+\begin{Soutput}
+Number of cases in table: 2201 
+Number of factors: 4 
+Test for independence of all factors:
+	Chisq = 1637.4, df = 25, p-value = 0
+	Chi-squared approximation may be incorrect
+\end{Soutput}
+\end{Schunk}
+Existen 2201 casos.
+
+
+\end{document}
